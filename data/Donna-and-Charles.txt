@@ -7,7 +7,7 @@
 disable mission
 	"Earth Retirement"
 
-mission "LME: Earth Retirement"
+mission "LEM: Earth Retirement"
 	name "Retired Family to Earth"
 	description "Transport two seniors to <destination>, where they plan to retire. They can only promise you <payment>."
 	minor
@@ -57,22 +57,22 @@ mission "LME: Earth Retirement"
 				accept
 			label reject
 			action
-				event "lme: charles donna timer" 90
+				event "lem: charles donna timer" 90
 			`	Charles looks surprised for a moment, and then, for the first time you've seen, he smiles. "Thank you, Captain <last>. I wish there were more people like you in the Paradise Worlds."`
 			`	You wish the couple the best of luck on Earth, and they slowly make their way to the train station. Presumably, their new apartment is far from here.`
 
 
-event "lme: charles donna timer"
+event "lem: charles donna timer"
 
 
-mission "LME: Earth Retirement 2"
+mission "LEM: Earth Retirement 2"
 	name "Retired Family to Shangri-La"
 	description "Transport two seniors and their son to <destination>, where they plan to retire. They will pay you <payment>."
 	minor
 	source "Earth"
 	destination "Shangri-La"
 	to offer
-		has "event: lme: charles donna timer"
+		has "event: lem: charles donna timer"
 	passengers 3
 	on offer
 		conversation
@@ -87,7 +87,7 @@ mission "LME: Earth Retirement 2"
 				`	"It was nothing."`
 				`	"What happened to Charles?"`
 					goto injuries
-				`	"How could you leave them to rot...?"`
+				`	"How could you leave them to rot..?"`
 					goto rot
 			`	"It was not nothing," Donna blurts out. "You were there for us when nobody else cared. You didn't even accept the agreed upon payment! Our former employers, our friends, even our children..." She trails off.`
 			label rot
@@ -108,5 +108,5 @@ mission "LME: Earth Retirement 2"
 	on complete
 		payment 85000
 		conversation
-			`When you land on <planet>, Abel insists on carrying all of the family's personal effects. Donna and Charles are almost reluctant to say goodbye to the luxurious accommodations on your ship, but they look ahead smiling as their son leads them on to the better, happier retirement that they have well earned.`
+			`When you land on <planet>, Abel insists on carrying all of the family's personal effects. Donna and Charles are almost reluctant to say goodbye to you and the <ship>, but they look ahead smiling as their son leads them on to the better, happier retirement that they have well earned.`
 			`	Before leaving, each of them shakes your hand in turn, and Abel slyly deposits a credit chip worth <payment> in your palm at the end of the handshake. With a final wave, you bid the Singers goodbye and good luck.`

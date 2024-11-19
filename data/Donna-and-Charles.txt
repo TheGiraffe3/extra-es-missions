@@ -29,8 +29,8 @@ mission "LEM: Earth Retirement"
 	destination "Earth"
 	to offer
 		random < 15
+		not "Earth Retirement: offered"
 	passengers 2
-	
 	on offer
 		conversation
 			`As you wander through the spaceport, you see an elderly man and woman sitting on a bench, talking about something that seems to be causing them some amount of stress.`
@@ -85,7 +85,9 @@ mission "LEM: Earth Retirement 2"
 	source "Earth"
 	destination "Shangri-La"
 	to offer
-		has "event: lem: charles donna timer"
+		or
+			has "event: lem: charles donna timer"
+			has "Earth Retirement: done"
 	passengers 3
 	on offer
 		conversation

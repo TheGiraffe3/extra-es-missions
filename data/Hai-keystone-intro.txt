@@ -2,7 +2,7 @@
 # https://github.com/endless-sky/endless-sky/pull/9856
 
 
-mission "Keystone Registration"
+mission "LEM: Keystone Registration"
 	invisible
 	source
 		government "Hai"

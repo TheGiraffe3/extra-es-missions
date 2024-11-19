@@ -16,5 +16,5 @@ jobs:
         ref: ${{ github.event.pull_request.head.sha }}
         show-progress: true
     - uses: codespell-project/actions-codespell@master
-#      with:
-#        ignore_words_file: .codespellignore
+      with:
+        exclude_file: .github/workflows/codespell.exclude
